@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root{
+    --bg-body:#fff;
+}
+
+body,
+html {
+    color: black;
+    font-size: 10px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--bg-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 9rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 4.7rem;
+    line-height: 1.2;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+h3{
+    font-size: 3.1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+h4{
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 700;
+}
+h5{
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+p{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+embed,
+img,
+iframe,
+object{
+    max-width: 100;
+}
+a,
+a:active,
+a:hover
+a:focus,
+button{
+    text-decoration: none;
+    outline: 0;
+}
+a:hover,
+button:hover{
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-thumb{
+    background: #dd7f30;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+    z-index: 2;
+}
+.header .navbar{
+    background: url(../Assets/nav.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    padding: 2rem 5rem;
+
+}
+.header .nav-brand{
+    width: 20rem;
+    margin-top: -0.1rem;
+}
+.header .navbar-nav .nav-link{
+    color: aqua;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+     
+}
+section{
+    padding: 10rem 0;
+}
+
+.main-btn{
+    display: inline-block;
+    border-radius: 5rem;
+    padding: 1rem 2.7rem;
+    border:.1rem solid red;
+    color: red;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: linear-gradient(to right,orange 50%,transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+}
+.main-btn:hover{
+    color: white;
+    background-position: left bottom ;
+}
