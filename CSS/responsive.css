@@ -1,0 +1,40 @@
+@media(max-width: 1199px){
+    h1{
+        font-size: 65px;
+    }
+}
+
+@media(max-width: 991px){
+    h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    h3{
+        font-size:20px;
+    }
+    .header_wrapper .navbar-brand img{
+        max-width: 120px;
+    }
+    .header-scrolled{
+        height: auto;
+    }
+    .header_wrapper .navbar-collapse{
+        margin-top: -2px;
+    }
+    .header_wrapper .menu-navbar-nav{
+        text-align: center;
+        background-color: white;
+        padding-bottom: 15px  ;
+    }
+}
+
+@media(max-width: 767px){
+    h1{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    .header_wrapper .nav-item .nav-link{
+        margin-top: 15px;
+    }
+}
