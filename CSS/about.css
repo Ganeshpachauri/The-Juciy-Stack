@@ -1,0 +1,31 @@
+.img-fluid img{
+    margin-top: 50px;
+}
+
+@keyframes bgAnim
+{
+0%
+{
+    transform: scaleY(0);
+}
+20%
+{
+        transform:scaleY(0.2);
+}
+40%
+{
+    transform: scaleY(0.4);
+}
+60%
+{
+        transform:scaleY(0.6);
+}
+80%
+{
+    transform: scaleY(0.8);
+}
+100%
+{
+        transform:scaleY(1);
+}
+}
