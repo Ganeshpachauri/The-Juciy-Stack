@@ -73,16 +73,14 @@
 
 .review_wrapper{
 width: 100%;
-height: auto;
 background-image: url(../Assets/reviewbanner2.jpg);
 background-repeat: no-repeat;
 background-position: 50% 50%;
-background-size: contain;
+background-size: cover;
 
 }
-.review_wrapper .carousel-item{
+.review_wrapper .carousel-inner{
     min-height: 500px;
-    height: 100%;
     background-color: #f0f0f0;
     padding: 50px;
 }
@@ -95,7 +93,7 @@ background-size: contain;
 
 .review_wrapper .carousel-item .contents{
     color: rgb(78, 75, 75);
-    padding: 0 5px;
+    padding: 0 0;
 }
 .review_wrapper .carousel-control-prev-icon ,
 .review_wrapper .carousel-control-next-icon{
@@ -104,3 +102,4 @@ background-size: contain;
 .review_wrapper .carousel-item .main-btn{
     line-height: 1.2;
 }
+

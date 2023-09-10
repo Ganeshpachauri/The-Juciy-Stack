@@ -90,5 +90,8 @@
     .footer_wrapper .footer-logo img{
         max-width: 60px;
     }
+    .main-btn{
+        line-height: 1.2;
+    }
 
 }
