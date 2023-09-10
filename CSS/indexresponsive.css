@@ -14,6 +14,9 @@
     .best_wrapper{
         padding-bottom: 80px;
     }
+    .review_wrapper .carousel-item .contents{
+        font-size: 16px;
+    }
 }
 @media(max-width: 991px){
     .best_wrapper .text-center h2{
@@ -30,6 +33,16 @@
     }
     .best_wrapper{
         padding-bottom: 60px;
+    }
+    .review_wrapper .carousel-item .contents h2{
+        font-size: 27px;
+    }
+    .review_wrapper .carousel-item .contents{
+        max-height: 350px;
+        font-size: 14px;
+    }
+    .review_wrapper .carousel-inner{
+        min-height: 450px;
     }
 }
 @media(max-width: 767px){
@@ -49,6 +62,19 @@
         padding-top:0 ;
         margin-top: -80px;
         padding-bottom: 40px;
+    }
+    .review_wrapper .carousel-item .contents{
+        max-height: 300px;
+        font-size: 14px;
+    }
+    .review_wrapper .carousel-inner{
+        min-height: 400px;
+    }
+    .review_wrapper .carousel-item h2{
+        font-size: 24px;
+    }
+    .stars{
+        font-size: 20px;
     }
 }
 @media(max-width: 576px){
@@ -75,5 +101,23 @@
         padding-top:0 ;
         margin-top: -100px;
         padding-bottom: 0;
+    }
+    .review_wrapper .carousel-item .contents{
+        max-height: 250px;
+        font-size: 12px;
+        overflow: scroll;
+    }
+    .review_wrapper .carousel-inner{
+        min-height: 300px;
+    }
+    .review_wrapper .carousel-item h2{
+        font-size: 21px;
+    }
+    .stars{
+        font-size: 18px;
+    }
+    .review_wrapper .carousel-item .main-btn{
+        padding: 8px 13px;
+        font-size: 8px;
     }
 }
