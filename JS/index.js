@@ -17,16 +17,3 @@ document.addEventListener("DOMContentLoaded", function() {
     video1.play();
     video2.style.display = "none";
 });
-
-window.addEventListener('load', function () {
-    var carouselItems = document.querySelectorAll('.contents');
-
-    carouselItems.forEach(function (item) {
-        if (item.scrollHeight > item.clientHeight) {
-            item.classList.add('overflow');
-        } else {
-            item.classList.remove('overflow');
-        }
-    });
-});
-
