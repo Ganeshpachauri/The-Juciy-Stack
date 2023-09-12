@@ -1,0 +1,13 @@
+@media(max-width:1150px){
+}
+
+@media(max-width:991px){
+    .background-image{
+        height: 60vh;
+    }
+}
+@media(max-width:767px){
+    .background-image{
+        height: 40vh;
+    }
+}
