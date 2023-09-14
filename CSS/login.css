@@ -1,12 +1,8 @@
-/* ===== Google Font Import - Poformsins ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-.containe{
+.containe {
     position: relative;
     max-width: 430px;
     width: 100%;
-    background:white;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -14,7 +10,7 @@
     margin-top: 100px;
 }
 
-.containe .forms{
+.containe .forms {
     display: flex;
     align-items: center;
     height: 440px;
@@ -23,38 +19,40 @@
 }
 
 
-.containe .form{
+.containe .form {
     width: 50%;
     padding: 30px;
-    background-color:rgba(255, 165, 0, 0.2);
+    background-color: rgba(255, 165, 0, 0.2);
     transition: margin-left 0.18s ease;
 }
 
-.containe.active .login{
+.containe.active .login {
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
-.containe .signup{
+.containe .signup {
     opacity: 0;
     transition: opacity 0.09s ease;
 }
-.containe.active .signup{
+
+.containe.active .signup {
     opacity: 1;
     transition: opacity 0.2s ease;
 }
 
-.containe.active .forms{
+.containe.active .forms {
     height: 600px;
 }
-.containe .form .title{
+
+.containe .form .title {
     position: relative;
     font-size: 27px;
     font-weight: 600;
 }
 
-.form .title::before{
+.form .title::before {
     content: '';
     position: absolute;
     left: 0;
@@ -65,14 +63,14 @@
     border-radius: 25px;
 }
 
-.form .input-field{
+.form .input-field {
     position: relative;
     height: 50px;
     width: 100%;
     margin-top: 30px;
 }
 
-.input-field input{
+.input-field input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -85,11 +83,11 @@
     transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid){
+.input-field input:is(:focus) {
     border-bottom-color: #4070f4;
 }
 
-.input-field i{
+.input-field i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -98,70 +96,89 @@
     transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid) ~ i{
+.input-field input:is(:focus)~i {
     color: #4070f4;
 }
 
-.input-field i.icon{
+.input-field i.icon {
     left: 0;
 }
-.input-field i.showHidePw{
+
+.input-field i.showHidePw {
     right: 0;
     cursor: pointer;
     padding: 10px;
 }
 
-.form .checkbox-text{
+.form .checkbox-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.checkbox-text .checkbox-content{
+.checkbox-text .checkbox-content {
     display: flex;
     align-items: center;
 }
 
-.checkbox-content input{
+.checkbox-content input {
     margin-right: 10px;
     accent-color: #4070f4;
 }
 
-.form .text{
+.form .text {
     color: #333;
     font-size: 14px;
 }
 
-.form a.text{
+.form a.text {
     color: #4070f4;
     text-decoration: none;
 }
-.form a:hover{
+
+.form a:hover {
     text-decoration: underline;
 }
 
-.form .button{
+.form .button {
     margin-top: 35px;
 }
 
-.form .button input{
+.form .button input {
     border: none;
     color: #fff;
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 6px;
-    background-color: #4070f4;
+    background-color: rgb(245, 139, 139);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 2s ease;
 }
 
-.button input:hover{
-    background-color: #265df2;
+.button input:hover {
+    background-color: orange;
 }
 
-.form .login-signup{
+.form .login-signup {
     margin-top: 30px;
     text-align: center;
+}
+
+.signup p.text {
+    padding-left: 10px;
+    margin-bottom: -8px !important;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: -8px !important;
+    display: none;
+}
+
+#registerButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }

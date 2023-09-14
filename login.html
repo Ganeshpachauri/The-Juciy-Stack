@@ -18,6 +18,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 
 
 </head>
@@ -68,12 +70,11 @@
 
                     <form action="login" method="post">
                         <div class="input-field">
-                            <input type="email" placeholder="Enter your email" required name="email">
+                            <input type="email" placeholder="Enter your email" name="email">
                             <i class="uil uil-envelope icon"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Enter your password" required
-                                name="password">
+                            <input type="password" class="password" placeholder="Enter your password" name="password">
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>
@@ -101,37 +102,42 @@
                 <div class="form signup">
                     <span class="title">Registration</span>
 
-                    <form action="register" method="post">
+                    <form action="register" method="post" id="registrationFrom" name="Register"
+                        onsubmit="return valid()">
                         <div class="input-field">
-                            <input type="text" placeholder="Enter your name" required name="name">
+                            <input type="text" placeholder="Enter your name" name="name" id="name">
                             <i class="uil uil-user"></i>
                         </div>
+                        <p class="error" id="nameError"></p>
                         <div class="input-field">
-                            <input type="email" placeholder="Enter your email" required name="email">
+                            <input type="text" placeholder="Enter your email" name="email" id="email">
                             <i class="uil uil-envelope icon"></i>
                         </div>
+                        <p class="error" id="emailError"></p>
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Create a password" required
-                                name="password">
+                            <input type="password" class="password" placeholder="Create a password" name="password"
+                                id="password">
                             <i class="uil uil-lock icon"></i>
                         </div>
+                        <p class="error" id="passwordError"></p>
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Confirm a password" required
-                                name="repassword">
+                            <input type="password" class="password" placeholder="Confirm a password" name="repassword"
+                                id="repassword">
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>
+                        <p class="error" id="repasswordError"></p>
 
                         <div class="checkbox-text">
                             <div class="checkbox-content">
-                                <input type="checkbox" id="termCon">
+                                <input type="checkbox" id="termCon" name="termandcondition">
                                 <label for="termCon" class="text">I accepted all <a href="about.html">terms and
                                         conditions</a></label>
                             </div>
                         </div>
 
                         <div class="input-field button">
-                            <input type="submit" value="Signup" class="main-btn">
+                            <input type="submit" value="Signup" class="main-btn" id="registerButton">
                         </div>
                     </form>
 
