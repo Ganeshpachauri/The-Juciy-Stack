@@ -155,9 +155,9 @@ login.addEventListener("click", () => {
      
          return true;
      }
-     */
 
-document.addEventListener('DOMContentLoaded', function () {
+     */
+    /* document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('registrationForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -169,6 +169,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const emailError = document.getElementById('emailError');
     const passwordError = document.getElementById('passwordError');
     const repasswordError = document.getElementById('repasswordError');
+
+    let isValidName = false;
+    let isValidemail = false;
+    let isValidpassword = false;
+    let isValidrepassword = false;
 
     // Function to display an error message
     function showError(element, message) {
@@ -196,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
             repasswordError.style.display = 'none';
             nameError.innerText = "Name can't be empty";
             nameInput.style.borderBottomColor = 'red';
-            return false;
+            isValidName = false;
         } else if (!/^[A-Za-z\s]+$/.test(name)) {
             nameError.style.display = 'block';
             emailError.style.display = 'none';
@@ -204,11 +209,11 @@ document.addEventListener('DOMContentLoaded', function () {
             repasswordError.style.display = 'none';
             nameInput.style.borderBottomColor = 'red';
             nameError.innerText = "Name can't contain symbol or number ";
-            return false;
+            isValidName = false;
         } else {
             nameError.style.display = 'none';
             nameInput.style.borderBottomColor = 'green';
-            return true;
+            isValidName = true;
         }
     });
 
@@ -216,11 +221,25 @@ document.addEventListener('DOMContentLoaded', function () {
     emailInput.addEventListener('input', function () {
         const email = emailInput.value.trim();
         if (email === '') {
-            showError(emailInput, 'Email can\'t be empty');
+            nameError.style.display = 'none';
+            emailError.style.display = 'block';
+            passwordError.style.display = 'none';
+            repasswordError.style.display = 'none';
+            emailError.innerText = "Email can't be empty ";
+            emailInput.style.borderBottomColor = 'red';
+            isValidemail = false;
         } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-            showError(emailInput, 'Enter a valid email address');
+            nameError.style.display = 'none';
+            emailError.style.display = 'block';
+            passwordError.style.display = 'none';
+            repasswordError.style.display = 'none';
+            emailError.innerText = "Enter a valid email address";
+            emailInput.style.borderBottomColor = 'red';
+            isValidemail = false;
         } else {
-            hideError(emailInput, emailError);
+            emailError.style.display = 'none';
+            emailInput.style.borderBottomColor = 'green';
+            isValidemail = true;
         }
     });
 
@@ -228,13 +247,33 @@ document.addEventListener('DOMContentLoaded', function () {
     passwordInput.addEventListener('input', function () {
         const password = passwordInput.value.trim();
         if (password === '') {
-            showError(passwordInput, 'Password field can\'t be blank');
+            nameError.style.display = 'none';
+            emailError.style.display = 'none';
+            passwordError.style.display = 'block';
+            repasswordError.style.display = 'none';
+            passwordError.innerText = "Password field can't be blank";
+            passwordInput.style.borderBottomColor = 'red';
+            isValidpassword = false;
         } else if (password.length < 8) {
-            showError(passwordInput, 'Password should contain at least 8 characters');
+            nameError.style.display = 'none';
+            emailError.style.display = 'none';
+            passwordError.style.display = 'block';
+            repasswordError.style.display = 'none';
+            passwordError.innerText = "Password should contain at least 8 characters";
+            passwordInput.style.borderBottomColor = 'red';
+            isValidpassword = false;
         } else if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[a-z]).{8,}$/.test(password)) {
-            showError(passwordInput, 'Password should contain at least one uppercase letter, one lowercase letter, one digit, and one symbol');
+            nameError.style.display = 'none';
+            emailError.style.display = 'none';
+            passwordError.style.display = 'block';
+            repasswordError.style.display = 'none';
+            passwordError.innerText = "Password should Abc1234(@,!,#,$,%,^,&,*,)";
+            passwordInput.style.borderBottomColor = 'red';
+            isValidpassword = false;
         } else {
-            hideError(passwordInput, passwordError);
+            passwordError.style.display = 'none';
+            passwordInput.style.borderBottomColor = 'green';
+            isValidpassword = true;
         }
     });
 
@@ -243,11 +282,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const repassword = repasswordInput.value.trim();
         const password = passwordInput.value.trim();
         if (password !== repassword) {
-            showError(repasswordInput, 'Passwords don\'t match');
+            nameError.style.display = 'none';
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+            repasswordError.style.display = 'block';
+            repasswordError.innerText = "Password does't match";
+            repasswordInput.style.borderBottomColor = 'red';
+            isValidrepassword = false;
         } else {
-            hideError(repasswordInput, repasswordError);
+            repasswordError.style.display = 'none';
+            repasswordInput.style.borderBottomColor = 'green';
+            isValidrepassword = true;
         }
     });
+
+
 
     // Event listener for the form submission
     form.addEventListener('submit', function (event) {
@@ -258,10 +307,143 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to validate the entire form
     function validateForm() {
-        if(!name){
+        var termandcondition = Register.termandcondition.checked;
+        if (!termandcondition) {
+            alert("You must accept the terms and conditions");
             return false;
         }
+        if (!isValidName || !isValidemail || !isValidpassword || !isValidrepassword ) {
+            return false;
+        }
+
         return true; // Return true to allow form submission, or false to prevent it
     }
-});
+}); */
+
+     document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('registrationForm');
+        const fields = {
+            name: {
+                input: document.getElementById('name'),
+                error: document.getElementById('nameError'),
+                isValid: false,
+                validate: (value) => {
+                    if (value.trim() === '') {
+                        showError(fields.name, "Name can't be empty");
+                    } else if (!/^[A-Za-z\s]+$/.test(value)) {
+                        showError(fields.name, "Name can't contain symbols or numbers");
+                    } else {
+                        hideError(fields.name);
+                        fields.name.isValid = true;
+                    }
+                },
+            },
+            email: {
+                input: document.getElementById('email'),
+                error: document.getElementById('emailError'),
+                isValid: false,
+                validate: (value) => {
+                    if (value.trim() === '') {
+                        showError(fields.email, "Email can't be empty");
+                    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                        showError(fields.email, 'Enter a valid email address');
+                    } else {
+                        hideError(fields.email);
+                        fields.email.isValid = true;
+                    }
+                },
+            },
+            password: {
+                input: document.getElementById('password'),
+                error: document.getElementById('passwordError'),
+                isValid: false,
+                validate: (value) => {
+                    if (value.trim() === '') {
+                        showError(fields.password, "Password field can't be blank");
+                    } else if (value.length < 8) {
+                        showError(fields.password, 'Password should contain at least 8 characters');
+                    } else if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[a-z]).{8,}$/.test(value)) {
+                        showError(fields.password, 'Password should Abc1234(@,!,#,$,%,^,&,*,)');
+                    } else {
+                        hideError(fields.password);
+                        fields.password.isValid = true;
+                    }
+                },
+            },
+            repassword: {
+                input: document.getElementById('repassword'),
+                error: document.getElementById('repasswordError'),
+                isValid: false,
+                validate: (value) => {
+                    const passwordValue = fields.password.input.value.trim();
+                    if (value !== passwordValue) {
+                        showError(fields.repassword, "Passwords don't match");
+                    } else {
+                        hideError(fields.repassword);
+                        fields.repassword.isValid = true;
+                    }
+                },
+            },
+            termCon: {
+                input: document.getElementById('termCon'),
+                error: document.getElementById('termandconditionError'),
+                isValid: false,
+                validate: () => {
+                    if (!fields.termCon.input.checked) {
+                    showError(fields.termCon, "Tick the T&C box");
+                    } else {
+                        hideError(fields.termCon);
+                        fields.termCon.isValid = true;
+                    }
+                },
+            },
+        };
+    
+        // Function to display an error message
+        function showError(field, message) {
+            field.input.style.borderBottomColor = 'red';
+            field.input.classList.add('invalid');
+            field.input.classList.remove('valid');
+            field.error.style.display = 'block';
+            field.error.innerText = message;
+        }
+    
+        // Function to hide an error message
+        function hideError(field) {
+            field.input.style.borderBottomColor = 'green';
+            field.input.classList.add('valid');
+            field.input.classList.remove('invalid');
+            field.error.style.display = 'none';
+        }
+    
+        // Event listeners for form fields
+        Object.values(fields).forEach((field) => {
+            if (field.input) {
+                field.input.addEventListener('input', function () {
+                    field.validate(field.input.value.trim());
+                });
+            }
+        });
+    
+        // Event listener for the form submission
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Validate all fields
+            Object.values(fields).forEach((field) => {
+                if (field.validate) {
+                    field.validate(field.input.value.trim());
+                }
+            });
+    
+            // Check if all fields are valid
+            const isFormValid = Object.values(fields).every((field) => field.isValid);
+    
+            // If all fields are valid, allow form submission
+            if (isFormValid) {
+                form.submit();
+            }
+        });
+    });
+    
 
