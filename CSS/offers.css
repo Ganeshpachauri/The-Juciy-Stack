@@ -35,3 +35,10 @@
     font-weight: bolder;
     color: rgb(43, 43, 43);
 }
+
+.offers .row
+{
+    --bs-gutter-x:0;
+    --bs-gutter-y: 0;
+    flex-wrap: wrap;
+}
