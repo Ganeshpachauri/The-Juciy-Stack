@@ -22,7 +22,7 @@ public class register extends HttpServlet {
             pst.setString(1, email);
             pst.setString(2, name);
             pst.setString(3, password);
-        
+
             int u = pst.executeUpdate();
 
             if (u > 0)
