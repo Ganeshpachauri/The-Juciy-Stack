@@ -1,0 +1,32 @@
+@media(max-width:1150px){
+    .text-overlay h1 {
+        font-size: 75px;
+    }
+    .text-overlay p{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:991px){
+    .text-overlay h1{
+        font-size: 60px;
+    }
+    .text-overlay p{
+        font-size: 16px;
+    }
+    .background-image{
+        height: 60vh;
+    }
+}
+@media(max-width:767px){
+    .text-overlay h1 {
+        font-size: 45px;
+    }
+    .text-overlay p{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .background-image{
+        height: 40vh;
+    }
+}

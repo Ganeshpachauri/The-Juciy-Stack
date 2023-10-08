@@ -1,0 +1,36 @@
+.ba{
+    height: 100px;
+    font-size: 2rem;
+    font-weight:600;
+    margin-top: 100px;
+}
+.ba .bahe{
+    background-color: orange;
+    padding: 25px;
+    border-radius: 20px
+}
+.he{
+    text-transform: capitalize;
+    margin-left: 10px; 
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: white;
+}
+h1.mainhead{
+    font-size: 1.8rem;
+}
+
+.lable{
+    font-size: 1.5rem;
+    padding: 20px;
+    font-weight: bold;
+    color: grey;
+}
+
+.data{
+    font-size: 1.5rem;
+    padding: 20px;
+    font-weight: bolder;
+    color: orange;
+    text-transform: capitalize;
+}

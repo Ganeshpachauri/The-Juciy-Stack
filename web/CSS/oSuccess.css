@@ -1,0 +1,27 @@
+.success{
+    margin-top: 100px ; 
+    font-size: 2rem;
+    font-weight: 600;   
+}
+.success .heading{
+    text-transform: capitalize;
+    margin-left: 10px; 
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: orange; 
+}
+
+ .food {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    color: #ff7b00;
+}
+
+.video{
+    margin-top: -150px;
+    width: 70vw; 
+}
+
+.video video{
+    width: 100%;
+}
