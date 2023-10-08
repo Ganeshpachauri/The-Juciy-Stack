@@ -1,0 +1,20 @@
+.mainhead{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: orange;
+    font-weight: bolder;
+}
+h1.pagename{
+    font-size: 2rem;
+    margin-left:20px;  
+    
+}
+.pagename span{
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    border-radius: 0 50px 50px 0;
+}
+.td{
+    line-height: 3.5;
+}

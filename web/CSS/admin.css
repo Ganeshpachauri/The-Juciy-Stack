@@ -1,0 +1,61 @@
+header{
+    height:100px;
+    background-color: orange;
+    font-size: 3rem;
+    font-weight: bolder;
+    color:white;
+    margin-bottom: 50px;
+}
+
+.barr{
+    height: 100px;
+    font-size: 2rem;
+    font-weight:600;
+    margin-bottom: 50px;
+}
+.barr .barhea{
+    background-color: orange;
+    padding: 25px;
+    border-radius: 20px
+}
+.hea{
+    text-transform: capitalize;
+    margin-left: 10px; 
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: white;
+}
+.menu{
+    height: 100px;
+}
+.menu .act{
+    background-color: orange;
+    color: white;
+}
+.main-btn{
+    line-height: 1.5;
+}
+
+.mainhead{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: orange;
+    font-weight: bolder;
+}
+h1.pagename{
+    font-size: 2rem;
+    margin-left:20px;  
+
+}
+.pagename span{
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    border-radius: 0 50px 50px 0;
+}
+.td{
+    line-height: 3.5;
+}
+
+
+

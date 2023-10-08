@@ -1,0 +1,45 @@
+.detail_wrapper{
+    margin-top: 150px;
+    height: 1000px;
+}
+
+.detail_wrapper .fromWrapper{
+    width: 50%;
+    height: 100%;
+    padding: 20px 0;
+   
+}
+
+.detail_wrapper .fromWrapper form{
+    background-color: rgba(255, 165, 0,0.3);
+    width: 80%;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.detail_wrapper .fromWrapper .input input::placeholder{
+    text-align: center;
+    color: black;
+}
+h3{
+    text-align: start;
+    margin-left: 10px;
+}
+
+.detail_wrapper .fromWrapper .input {
+    width: 100%;
+    height: 50px;
+}
+
+.detail_wrapper .fromWrapper .input input{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+.detail_wrapper .fromWrapper .input input:active{
+    border-color: rgb(26, 193, 240);
+    border-bottom: 1px;
+}
